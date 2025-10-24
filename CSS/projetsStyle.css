@@ -1,0 +1,131 @@
+.enTete {
+    padding-top: 2rem;
+}
+
+.enTete h2 {
+    color:rgba(0, 128, 0, 0.781);
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 3rem 6rem;
+}
+
+.enTete p {
+    font-size: 1.2rem;
+    color: rgba(6, 1, 44, 0.66);
+    text-align: center;
+    margin: 0 6rem;
+}
+
+.gallerieImages {
+    background: rgba(240, 255, 255, 0);  
+    /*box-shadow: 0 3px 10px rgba(94, 97, 139, 0.151);*/
+    border-radius: 10px;
+    max-width: 1250px;
+    margin: 5rem auto;
+    padding: 0 3rem;
+    position: relative;
+}
+
+.headerGallerie {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.headerGallerie h3 {
+    font-size: 2.5rem;
+    color: rgba(0, 0, 255, 0.518);
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+}
+
+.headerGallerie p {
+    font-size: 1rem;
+    color: rgba(6, 1, 44, 0.66);
+}
+
+.imagesGallerie {
+    display: flex;
+    overflow: hidden; /*permet de caher les images qui débordent*/
+    scroll-behavior: smooth;
+    gap: 2rem;
+    margin: 0 4rem;
+    padding: 1rem 0;
+}
+
+.imagesGallerie a {
+    text-decoration: none; /*Pour enlever le soulignement des liens*/
+}
+
+.image {
+    min-width: 300px;
+    min-height: 350px;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(94, 97, 139, 0.151);
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.image:hover {
+    transform: translateY(-4px); /*Lève l'image de 4px*/
+    box-shadow: 0 5px 15px rgba(31, 32, 46, 0.151);
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-items: center;
+    object-fit: contain;
+}
+
+.image h3 {
+    margin-left: 0.8rem;
+    margin-bottom: 0.8rem;
+    color:rgba(6, 1, 44, 0.66);
+    font-size: 1.1rem;
+}
+
+.image p {
+    /*margin: 0; /*Pour supprimer les marges par défaut appliquées au texte d'un paragraphe dans une légende*/
+    padding-left: 0.8rem;
+    color: rgba(6, 1, 44, 0.66);
+    font-size: 0.90rem;
+    line-height: 1.5;
+}
+
+.flecheDeDefilement {
+    position: absolute;
+    top: 50%;
+    background: white;
+    border: 2px solid rgb(184, 183, 183);
+    border-radius: 40%;
+    width: 60px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 255, 0.518);
+    z-index: 2;
+}
+
+.flecheDeDefilement:first-of-type {
+    left: 1rem;
+}
+
+.flecheDeDefilement:last-of-type {
+    right: 1rem;
+}
+
+.flecheDeDefilement:hover {
+    background: cornflowerblue;
+    color: whitesmoke;
+    border-color: blueviolet;
+}

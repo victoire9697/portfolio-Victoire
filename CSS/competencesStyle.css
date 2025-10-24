@@ -1,0 +1,80 @@
+.introductionCompetences {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: azure;
+    color: rgba(6, 1, 44, 0.66);
+}
+
+.introductionCompetences h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    color: rgba(0, 128, 0, 0.781);
+}
+
+.introductionCompetences p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.grilleCompetences {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 3rem 2rem;
+}
+
+.image {
+    min-width: 300px;
+    min-height: 350px;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(94, 97, 139, 0.151);
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    /*flex-shrink est une propriété qui sert à spécifier le facteur de rétrécissement d'un élément flexible
+    lorsque lorsque l'espace dans son conteneur flexbox est inssuffisant pour accueillir tous les éléments à leur
+    taille initiale. Etant donné que nous voulons que les images gardent leurs tailles initiales quoi qu'il arrive et caher les parties qui débordent,
+    on met la valaur à 0.*/
+    /*flex-shrink: 0;*/
+}
+
+.image:hover {
+    transform: translateY(-4px); /*Lève l'image de 4px*/
+    box-shadow: 0 5px 15px rgba(31, 32, 46, 0.151);
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-items: center;
+    object-fit: contain;
+}
+
+/*.descriptionImage {
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 1rem;
+    text-decoration: none;
+}*/
+
+.image h3 {
+    margin-left: 0.8rem;
+    margin-bottom: 0.8rem;
+    color:rgba(6, 1, 44, 0.66);
+    font-size: 1.1rem;
+}
+
+.image p {
+    /*margin: 0; /*Pour supprimer les marges par défaut appliquées au texte d'un paragraphe dans une légende*/
+    padding-left: 0.8rem;
+    color: rgba(6, 1, 44, 0.66);
+    font-size: 0.90rem;
+    line-height: 1.5;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mawuli Marcelin Dotse">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="CSS/contactsStyle.css">
+    <link rel="stylesheet" href="CSS/indexStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Me contacter - Porte Folio</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <i class="fas fa-pen-to-square"></i>
+                <h1>Porte Folio</h1>
+            </a>
+        </div>
+    </header>
+
+    <nav class="menuNavigation">
+        <ul>
+            <li>
+                <div class="onglets">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="onglets">
+                    <a href="competences.html">
+                        <i class="fas fa-code"></i>
+                        <span>Mes compétences</span>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="onglets">
+                    <a href="projets.html">
+                        <i class="fas fa-folder"></i>
+                        <span>Mes projets</span>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="onglets">
+                    <a href="a-propos.html">
+                        <i class="fas fa-user"></i>
+                        <span>À propos de moi</span>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="onglets">
+                    <a href="contacts.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contactez-moi</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contactezMoi">
+            <address>
+                <h2>Mes coordonnées</h2>
+                <p>Nom : Dotse</p>
+                <p>Prénom : Mawuli Marcelin</p>
+                <p>Téléphone : +1 581 688 2533</p>
+                <p>Email : marcelindotse@gmail.com</p>
+                <p>Adresse : 6455 Rue Saint-Georges, Lévis, QC G6V 4J1</p>
+            </address>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5461.228842920832!2d-71.17991901273277!3d46.811900696683786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb89597b7ee08fb%3A0x4e88db538d8fd1af!2s6455%20Rue%20Saint-Georges%2C%20L%C3%A9vis%2C%20QC%20G6V%204H8!5e0!3m2!1sfr!2sca!4v1761191643434!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <section class="formulaireJoinUs">
+            <h2>Remplissez le formulaire suivant si vous voulez rejoindre mon équipe !</h2>
+            <form>
+                <label for="_prenom">Prénom : </label>
+                <input type="text" name="prenom" id="_prenom" placeholder="Entrez votre prénom">
+
+                <label for="_nom">Nom : </label>
+                <input type="text" name="nom" id="_nom" placeholder="Entrez votre nom">
+
+                <div class="radioButtons">
+                    <label for="_sexe">Feminin </label> 
+                    <input type="radio" name="sexe" id="_sexe" value="masculin">
+                
+                    <label for="_sexe">Masculin </label>
+                    <input type="radio" name="sexe" id="_sexe" value="feminin">
+
+                    <label for="_sexe">Ne pas spécifier </label>
+                    <input type="radio" name="sexe" id="_sexe" value="Ne pas spécifier" checked>
+                </div>
+                
+                <label for="_fonction">Fonction : </label>
+                <select name="fonction" id="_fonction">
+                    <option value="developpeur">Développeur</option>
+                    <option value="designer">Designer</option>
+                    <option value="gestionnaire">Gestionnaire de projet</option>
+                    <option value="autre">Autre</option>
+                </select><br><br>
+
+                <label for="_email">Email : </label>
+                <input type="email" name="email" id="_email" placeholder="Entrez votre email">
+
+                <label for="prenom">Message : </label>
+                <textarea name="message" rows="5" cols="30" placeholder="Entrez votre message ici"></textarea>
+                
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsLetter">
+            <i class="fa-regular fa-newspaper"></i>
+            <h2>Newsletters</h2>
+            <p>Abonnez-vous à mon infolettre pour rester informer de mes projets et réalisations !</p>
+        </div>
+
+        <div class="formulaire">
+            <form>
+                <label for="id_Courriel">Courriel : </label>
+                <input type="email" id="id_Courriel" name="courriel" placeholder="Entrez votre courriel"><br><br>
+            </form>
+            <button>
+                <i class="fa-regular fa-bell"></i>
+                <span>S'abonner</span>
+            </button>
+        </div>
+
+        <div class="reseauxSociaux">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tumblr.com/"><i class="fa-brands fa-tumblr"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
