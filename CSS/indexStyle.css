@@ -1,530 +1,468 @@
-/*Pour eviter les styles par défaut selon les navigateurs, on réinitialise toute la page*/
+/* ================================
+   RÉINITIALISATION
+================================ */
+
+body {
+    background-color: rgb(0, 255, 195) !important;
+}
+
 * {
     margin: 0;
     padding: 0;
-
-    /*De ce que j'ai compris de mes recherches, box-sizing: border-box facilite grandemant la gestion des mises en page car la largeur et la hauteur incluent le padding et la border(l'eppaisseur des lignes, je pense).
-    Cela offre ainsi une meilleure précision pour la mise en page surtout quand on veut utiliser des éléments comme les tableaux pour lesquels des dimensions fixes sont souvent requises pour la page.*/
     box-sizing: border-box;
 }
 
-/*Styles de base pour tout le contenu du site.*/
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    /*line-height permet de definir la hauteur entre les lignes. Un espacement optimal garantit une meilleure visibilité du texte.*/
-    line-height: 1.5;
-    background-color: azure;
-    color:black;
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ================================
+   EN-TÊTE
+================================ */
 
 header {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: white;
-    padding: 1rem 2rem;
-    display: flex; /*permet d'alligner et de distribuer automatiquement l'espace entre tous les éléments à l'interieur du conteneur.*/
-
-    /*justify-content permet d'alligner horizontallement tous les élements de la balise.
-    space-between permet de mettre un espace entre les différents éléments*/
-    justify-content: space-between;
-
-    /*align-items permet d'alligner verticalement tous les éléments de la balise en fonction de la valeur qui lui est attribuée.
-    center centre les éléments de la balise*/
-    align-items: center;
-
-    /*box shadow peermet d'ajouter un effet d'ombre*/
-    box-shadow: rgb(126, 135, 143);
-}
-
-.logo {
-    display: flex;
-    align-items: center; /*Pour centrer l'icone et le texte du logo.*/
+    background-color: #ffffff;
+    padding: 18px 6%;
+    border-bottom: 1px solid #dbe2ea;
 }
 
 .logo a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    text-decoration: none; /*Pour enlever le soulignement du lien*/
-    color: white; /*Pour que le texte du logo reste blanc*/
-    gap: 15px;
+    gap: 12px;
+    color: #b1202d;
 }
 
-.logo a i {
-    font-size: 2rem; /*Pour la taille de l'icone*/
-    color:rgba(0, 128, 0, 0.781);
+.logo i {
+    font-size: 2rem;
 }
 
 .logo h1 {
-    font-size: 2.5;
-    font-weight: 600;
+    font-size: 1.8rem;
 }
 
+
+/* ================================
+   NAVIGATION
+================================ */
+
 .menuNavigation {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    background: azure;
-    /*position définit la façon dont un ou des éléments (le menu de navigation en l'occurence ici) sont positionnés sur la page web.
-    La valeur sticky rend les onglets fixes lorsque sa position de défilement atteind un seuil. Simplement, reste visible en haut quand on scroll*/
     position: sticky;
-
-    /*C'est une propriété utilisée pour définir le seuil de collage. La valeur 0 ici fixe le seuil de scroll au sommet de la fenêtre*/
     top: 0;
-
-    /*La propriete z-index permet de définir l'ordre d'empilement des élément en cas de chevauchement. 
-    Il est possible de lui assigner une valeur ou non. Lorqu'une valeur ne lui est pas assigné, sa valeur par défaut est auto.*/
-    z-index: 100;
+    z-index: 1000;
+    background-color: #111827;
 }
 
 .menuNavigation ul {
+    width: min(1100px, 92%);
+    margin: 0 auto;
     display: flex;
-    list-style: none;
     justify-content: center;
-    gap : 0; /*Pour qu'il n'y ait pas d'espace entre les éléments de la liste.*/
+    flex-wrap: wrap;
 }
 
 .menuNavigation li {
-
-    /*La propriéte flex definit la taille principale, la capacité d'un élément flexible (les libélés de la liste ul en l'occurence ici) à s'étendre et à se contracter dans un conteneur flexbox.*/
     flex: 1;
+    min-width: 150px;
 }
 
 .onglets a {
     display: flex;
-    flex-direction: row; /*Devrait mettre le texte à droite l'icone*/
     align-items: center;
     justify-content: center;
-    padding: 1rem 1rem;
-
-    /*text decoration, de ce que j'ai compris, definit comment l'élement devrait s'fficher. Spécifiquement,
-    elle definit si l'élément devrait être souligné, barré, surligné ou sans décoration. La valeur none permet donc de supprimer ces décoration potentielles. Puisque le texte de nos onglets contient des liens cliquables,
-    il sera par défaut souligné, ce qu'on ne veut pas. On met donc text-decoration: none*/
-    text-decoration: none;
-    color: rgba(7, 66, 230, 0.781);
-    
-    /*La propriété transition sert à créer des transitions fluides et animées entre deux états d'un élément (les differents onglets ici). Elle possède 3 sous propriétés : 
-    -transition-property qui sert à spécifier la propriété CSS à animer. Elle peut prendre 4 valeurs : none, all, le nom de la propriété à animer ou une liste des propriétés à animer.
-    -transition-duration pour définir la durée en s ou en ms de l'animation. Elle prend la valeur default (0s) lorqu'elle n'est pas spécifiée.
-    -transition-timing-function  pour définir la vitesse ou courbe d'accélération de la transition. Elle peut prendre les valeurs ease(valeur par défaut), linear, ease-in ease-out...
-    -transition-delay, délait, en s ou en ms, avant que la transition commence. Elle prend la valeur default (0s) lorqu'elle n'est pas spécifiée.*/
-    transition: all 0.5 linear;
-    border-bottom: 3px solid transparent; /*Sert à définir  à la fois le style, l'épaisseur et la couleur le la bordure inférieure d'un élement (nos onglets ici).*/
+    gap: 8px;
+    padding: 16px 12px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-/*":hover fait réference à une pseudo-classe en qui sert à appliquer un style à un élément (toujours nos onglets ici lol) lorque l'utilisateur le survole avec le curseur de sa souris sans qu'il ait besoin de  cliquer dessus."*/
-.onglets a:hover {
-    background: white;
-    color: rgba(0, 128, 0, 0.781);
-    border-bottom-color: rgba(0, 128, 0, 0.781);
+.onglets a:hover,
+.onglets a.active {
+    background-color: #b1202d;
 }
 
-.onglets a i {
-    font-size: 1.5rem; /*taille des icones*/
-    margin-right: 0.4rem;
+
+/* ================================
+   CONTENU PRINCIPAL
+================================ */
+
+main {
+    width: min(1150px, 92%);
+    margin: 40px auto;
 }
 
-/*Pour ajuster spécifiquement la taille et l'aspect du texte des onglets.*/
-.onglets a span {
-    font-size: 0.9;
-    font-weight: 500;
-}
+
+/* ================================
+   CARTE DE PRÉSENTATION
+================================ */
 
 .carteDePresentation {
-display: flex;
-max-width: 1200px;
-margin: 5rem auto;
-padding: 3rem;
-background: white;
-border-radius: 20px;
-box-shadow: 0 10px 20px;
-gap: 4rem;
-align-items: center;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 45px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
 
-.texteDePresentation {
-    flex: 60%;
+.petitTitre {
+    color: #b1202d;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
 .texteDePresentation h2 {
-    font-size: 2.5rem;
-    color: rgba(0, 0, 255, 0.518);
-    margin-bottom: 0.7rem;
-    font-weight: 500;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 12px;
 }
 
 .texteDePresentation h3 {
-    font-size: 1.2rem;
-    color: rgba(0, 128, 0, 0.781);
-    margin-bottom: 1.5rem;
-    font-weight: 500;
+    color: #b1202d;
+    font-size: 1.35rem;
+    margin-bottom: 20px;
 }
 
 .texteDePresentation p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: rgba(6, 1, 44, 0.66);
+    margin-bottom: 18px;
 }
 
-.imageDePresentation {
-    flex: 30%;
-    display: flex;
-    justify-content: center;
+.boutonPrincipal {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 10px;
+    padding: 13px 22px;
+    border-radius: 8px;
+    background-color: #b1202d;
+    color: #ffffff;
+    font-weight: bold;
+    transition:
+        transform 0.3s,
+        background-color 0.3s;
+}
+
+.boutonPrincipal:hover {
+    transform: translateY(-2px);
+    background-color: #8d1823;
 }
 
 .imageDePresentation img {
-    width: 300px;
-    height: 300px;
-    border-radius: 40%;
-    object-fit: cover; /*Recadre l'image pour remplir le cadre.*/
-    border: 3px solid rgb(41, 108, 232);
-    box-shadow: 0 5px 15px rgba(208, 212, 247, 0.151);
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #f2d6d9;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.gallerieImages {
-    max-width: 1200px;
-    margin: 5rem auto;
-    padding: 0 3rem;
-    position: relative;
-}
 
-.headerGallerie {
-    text-align: center;
-    margin-bottom: 3rem;
-}
 
-.headerGallerie h3 {
-    font-size: 2.5rem;
-    color: rgba(0, 0, 255, 0.518);
-    margin-bottom: 0.7rem;
-    font-weight: 500;
-}
-
-.headerGallerie p {
-    font-size: 1rem;
-    color: rgba(6, 1, 44, 0.66);
-}
-
-.imagesGallerie {
-    display: flex;
-    overflow: hidden; /*permet de caher les images qui débordent*/
-    scroll-behavior: smooth;
-    gap: 2rem;
-    margin: 0 4rem;
-    padding: 1rem 0;
-}
-
-.image {
-    min-width: 300px;
-    min-height: 350px;
-    border-radius: 17px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(94, 97, 139, 0.151);
-    transition: transform 0.3s ease;
-    align-items: center;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.image:hover {
-    transform: translateY(-4px); /*Lève l'image de 4px*/
-    box-shadow: 0 5px 15px rgba(31, 32, 46, 0.151);
-}
-
-.image img {
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    justify-items: center;
-    object-fit: contain;
-}
-
-image figcaption {
-    align-items: center;
-    justify-items: center;
-    padding-bottom: 1rem;
-}
-
-.image h3 {
-    margin-left: 0.8rem;
-    margin-bottom: 0.8rem;
-    color:rgba(6, 1, 44, 0.66);
-    font-size: 1.1rem;
-}
-
-.image p {
-    padding-left: 0.8rem;
-    color: rgba(6, 1, 44, 0.66);
-    font-size: 0.90rem;
-    line-height: 1.5;
-}
-
-.flecheDeDefilement {
-    position: absolute;
-    top: 50%;
-    background: white;
-    border: 2px solid rgb(184, 183, 183);
-    border-radius: 40%;
-    width: 60px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    font-size: 1.2rem;
-    color: rgba(0, 0, 255, 0.518);
-    z-index: 2;
-}
-
-.flecheDeDefilement:first-of-type {
-    left: 1rem;
-}
-
-.flecheDeDefilement:last-of-type {
-    right: 1rem;
-}
-
-.flecheDeDefilement:hover {
-    background: cornflowerblue;
-    color: whitesmoke;
-    border-color: blueviolet;
-}
+/* ================================
+   SECTION AUDIO
+================================ */
 
 .audioDePresentation {
-    max-width: 600px;
-    margin: 4rem auto;
-    padding: 2rem;
+    margin-top: 55px;
+    padding: 40px;
     text-align: center;
-    background: white;
-    border-radius: 15px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
 
-.audioDePresentation h3 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
+.audioDePresentation h2 {
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.audioDePresentation>p {
+    color: #64748b;
+    margin-bottom: 25px;
 }
 
 .contenuAudio {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    background: #f8f9fa; 
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #e9ecef;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
 .contenuAudio i {
-    font-size: 2.5rem;
-    color:rgba(0, 128, 0, 0.781);
+    font-size: 2.8rem;
+    color: #b1202d;
 }
 
-audio {
-    width: 300px;
-    height: 40px;
+.contenuAudio audio {
+    width: min(520px, 100%);
 }
+
+
+/* ================================
+   PIED DE PAGE
+================================ */
 
 footer {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: white;
-    padding: 3rem 2rem;
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    align-items: start;
-}
-
-.newsLetter {
+    margin-top: 60px;
+    padding: 45px 6% 25px;
+    background-color: #111827;
+    color: #ffffff;
     text-align: center;
 }
 
+.newsLetter {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
 .newsLetter i {
-    font-size: 3rem;
-    color: rgba(0, 128, 0, 0.781);
-    margin-bottom: 1rem;
+    color: #f5b7bd;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
 }
 
 .newsLetter h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
 }
 
 .newsLetter p {
-    line-height: 1.6;
-}
-
-.formulaire {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    color: #cbd5e1;
 }
 
 .formulaire form {
-    width: 100%;
-    max-width: 300px;
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .formulaire label {
-    display: block;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .formulaire input {
-    width: 100%;
-    padding: 0.8rem;
+    flex: 1;
+    min-width: 220px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.formulaire input::placeholder {
-    color: #bdc3c7;
-}
-
-.formulaire input:focus {
-    outline: none;
-    border-color: rgba(0, 128, 0, 0.781); 
-    background: rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
 }
 
 .formulaire button {
-    background: rgba(0, 128, 0, 0.781);
-    color: white;
+    padding: 12px 18px;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
+    border-radius: 7px;
+    background-color: #b1202d;
+    color: #ffffff;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
 }
 
 .formulaire button:hover {
-    background:rgba(0, 128, 0, 0.781);
-    transform: translateY(-2px);
+    background-color: #8d1823;
 }
 
 .reseauxSociaux {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .reseauxSociaux a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
+    display: grid;
+    width: 45px;
+    height: 45px;
+    place-items: center;
     border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1.3rem;
+    background-color: #ffffff;
+    color: #111827;
+    font-size: 1.35rem;
+    transition:
+        background-color 0.3s,
+        color 0.3s,
+        transform 0.3s;
 }
 
 .reseauxSociaux a:hover {
-    background:rgba(0, 128, 0, 0.781);
-    transform: translateY(-3px) scale(1.1);
+    background-color: #b1202d;
+    color: #ffffff;
+    transform: translateY(-3px);
 }
 
-@media (max-width: 968px) {
+.copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #374151;
+    color: #94a3b8;
+}
+
+
+/* ================================
+   RESPONSIVE TABLETTE
+================================ */
+
+@media screen and (max-width: 900px) {
+
     .carteDePresentation {
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr;
         text-align: center;
-        padding: 2rem;
-        gap: 2rem;
     }
-    
-    .imageDePresentation img {
-        width: 250px;
-        height: 250px;
+
+    .imageDePresentation {
+        grid-row: 1;
     }
-    
+
     .imagesGallerie {
-        margin: 0 3rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+
+@media screen and (max-width: 600px) {
+
     header {
-        flex-direction: column;
-        gap: 1rem;
         text-align: center;
     }
-    
-    .menuNavigation ul {
-        flex-direction: column;
-    }
-    
-    .onglets a {
-        flex-direction: row;
+
+    .logo a {
         justify-content: center;
-        gap: 0.5rem;
     }
-    
+
+    .menuNavigation ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menuNavigation li {
+        min-width: 0;
+    }
+
+    .onglets a {
+        font-size: 0.9rem;
+        padding: 13px 6px;
+    }
+
+    main {
+        width: 95%;
+        margin-top: 25px;
+    }
+
+    .carteDePresentation,
+    .gallerieImages,
+    .audioDePresentation {
+        padding: 25px 18px;
+    }
+
+    .imageDePresentation img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .conteneurGallerie {
+        align-items: stretch;
+    }
+
     .imagesGallerie {
-        margin: 0 1rem;
+        grid-template-columns: 1fr;
     }
-    
-    .image {
-        min-width: 280px;
-    }
-    
+
     .flecheDeDefilement {
         width: 40px;
         height: 40px;
-        font-size: 1rem;
+        margin-top: 90px;
     }
-    
-    footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2.5rem;
-    }
-    
-    .contenuAudio {
+
+    .formulaire form {
         flex-direction: column;
-        gap: 1rem;
+    }
+
+    .formulaire input,
+    .formulaire button {
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .carteDePresentation {
-        margin: 1rem;
-        padding: 1.5rem;
-    }
-    
-    .texteDePresentation h2 {
-        font-size: 2rem;
-    }
-    
-    .galerieImages {
-        padding: 0 1rem;
-    }
-    
-    .image {
-        min-width: 250px;
-    }
-    
-    .headerGallerie h3 {
-        font-size: 1.8rem;
-    }
-    
-    .audioDePresentation {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
-    }
-    
-    audio {
-        width: 250px;
-    }
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logoSymbole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background-color: #b1202d;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(177, 32, 45, 0.25);
+}
+
+.logoTexte h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 1.5rem;
+}
+
+.logoTexte p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.imageDePresentation img {
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #f2d6d9;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }

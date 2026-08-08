@@ -1,131 +1,501 @@
+/* =========================================
+   EN-TÊTE DE LA PAGE PROJETS
+========================================= */
+
 .enTete {
-    padding-top: 2rem;
+    margin-bottom: 45px;
+    padding: 45px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.enTete .petitTitre {
+    margin-bottom: 7px;
+    color: #bd1e2d;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .enTete h2 {
-    color:rgba(0, 128, 0, 0.781);
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: center;
-    margin: 3rem 6rem;
+    margin-bottom: 18px;
+    color: #111827;
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
 }
 
-.enTete p {
-    font-size: 1.2rem;
-    color: rgba(6, 1, 44, 0.66);
-    text-align: center;
-    margin: 0 6rem;
+.enTete>p:last-child {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 1.05rem;
 }
 
-.gallerieImages {
-    background: rgba(240, 255, 255, 0);  
-    /*box-shadow: 0 3px 10px rgba(94, 97, 139, 0.151);*/
-    border-radius: 10px;
-    max-width: 1250px;
-    margin: 5rem auto;
-    padding: 0 3rem;
-    position: relative;
+
+/* =========================================
+   GALERIE
+========================================= */
+
+.gallerieProjets {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
 
 .headerGallerie {
+    margin-bottom: 35px;
     text-align: center;
-    margin-bottom: 3rem;
 }
 
-.headerGallerie h3 {
-    font-size: 2.5rem;
-    color: rgba(0, 0, 255, 0.518);
-    margin-bottom: 0.7rem;
-    font-weight: 500;
+.headerGallerie h2 {
+    margin-bottom: 8px;
+    color: #111827;
+    font-size: 2rem;
 }
 
 .headerGallerie p {
-    font-size: 1rem;
-    color: rgba(6, 1, 44, 0.66);
+    color: #64748b;
 }
+
+
+/* =========================================
+   CONTENEUR DU CARROUSEL
+========================================= */
+
+.conteneurGallerie {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+
+    /* Important */
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ZONE DE DÉFILEMENT
+========================================= */
 
 .imagesGallerie {
     display: flex;
-    overflow: hidden; /*permet de caher les images qui débordent*/
+
+    /* Très important :
+       interdit aux cartes de passer à la ligne */
+    flex-wrap: nowrap;
+
+    flex: 1;
+    min-width: 0;
+
+    gap: 24px;
+
+    /* Cache les projets suivants */
+    overflow-x: hidden;
+    overflow-y: hidden;
+
     scroll-behavior: smooth;
-    gap: 2rem;
-    margin: 0 4rem;
-    padding: 1rem 0;
+
+    scrollbar-width: none;
 }
 
-.imagesGallerie a {
-    text-decoration: none; /*Pour enlever le soulignement des liens*/
+.imagesGallerie::-webkit-scrollbar {
+    display: none;
 }
 
-.image {
-    min-width: 300px;
-    min-height: 350px;
-    border-radius: 17px;
+
+/* =========================================
+   CARTE PROJET
+========================================= */
+
+.projet {
+    /*
+       Sur grand écran :
+       3 cartes visibles en même temps
+    */
+    flex: 0 0 calc((100% - 48px) / 3);
+
+    min-width: 0;
+
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(94, 97, 139, 0.151);
-    transition: transform 0.3s ease;
-    align-items: center;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
 
-.image:hover {
-    transform: translateY(-4px); /*Lève l'image de 4px*/
-    box-shadow: 0 5px 15px rgba(31, 32, 46, 0.151);
+.projet:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 30px rgba(15, 23, 42, 0.15);
 }
 
-.image img {
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    justify-items: center;
-    object-fit: contain;
+
+/* =========================================
+   IMAGE DU PROJET
+========================================= */
+
+.imageProjet {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background-color: #e2e8f0;
 }
 
-.image h3 {
-    margin-left: 0.8rem;
-    margin-bottom: 0.8rem;
-    color:rgba(6, 1, 44, 0.66);
-    font-size: 1.1rem;
+.imageProjet img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s;
 }
 
-.image p {
-    /*margin: 0; /*Pour supprimer les marges par défaut appliquées au texte d'un paragraphe dans une légende*/
-    padding-left: 0.8rem;
-    color: rgba(6, 1, 44, 0.66);
-    font-size: 0.90rem;
-    line-height: 1.5;
+.projet:hover .imageProjet img {
+    transform: scale(1.05);
 }
 
-.flecheDeDefilement {
+
+/* =========================================
+   CATÉGORIE DU PROJET
+========================================= */
+
+.categorieProjet {
     position: absolute;
-    top: 50%;
-    background: white;
-    border: 2px solid rgb(184, 183, 183);
-    border-radius: 40%;
-    width: 60px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    font-size: 1.2rem;
-    color: rgba(0, 0, 255, 0.518);
+
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background-color: #bd1e2d;
+    color: #ffffff;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+
     z-index: 2;
 }
 
-.flecheDeDefilement:first-of-type {
-    left: 1rem;
+
+/* =========================================
+   CONTENU DE LA CARTE
+========================================= */
+
+.contenuProjet {
+    display: flex;
+    flex-direction: column;
+
+    padding: 23px;
+
+    /*
+       Permet aux cartes d'avoir
+       une présentation plus régulière
+    */
+    min-height: 500px;
 }
 
-.flecheDeDefilement:last-of-type {
-    right: 1rem;
+.contenuProjet h3 {
+    min-height: 58px;
+
+    margin-bottom: 12px;
+
+    color: #111827;
+
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.contenuProjet>p {
+    min-height: 95px;
+
+    margin-bottom: 18px;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   DÉTAILS DU PROJET
+========================================= */
+
+.detailsProjet {
+    margin-bottom: 20px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #e2e8f0;
+
+    list-style: none;
+}
+
+.detailsProjet li {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 0.9rem;
+}
+
+.detailsProjet i {
+    margin-top: 5px;
+
+    color: #bd1e2d;
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 22px;
+}
+
+.technologies span {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background-color: #e9eef5;
+
+    color: #334155;
+
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   BOUTON VOIR LE PROJET
+========================================= */
+
+.voirProjetButton {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    /*
+       Pousse le bouton vers le bas
+       même si les textes sont différents
+    */
+    margin-top: auto;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background-color: #bd1e2d;
+    color: #ffffff;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
+}
+
+.voirProjetButton:hover {
+    background-color: #941723;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FLÈCHES
+========================================= */
+
+.flecheDeDefilement {
+    display: flex;
+
+    width: 50px;
+    height: 50px;
+
+    flex: 0 0 50px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #bd1e2d;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+
+    z-index: 10;
+
+    transition:
+        background-color 0.3s,
+        transform 0.3s,
+        opacity 0.3s;
 }
 
 .flecheDeDefilement:hover {
-    background: cornflowerblue;
-    color: whitesmoke;
-    border-color: blueviolet;
+    background-color: #941723;
+
+    transform: scale(1.08);
+}
+
+.flecheDeDefilement:active {
+    transform: scale(0.95);
+}
+
+.flecheDeDefilement:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media screen and (max-width: 950px) {
+
+    .projet {
+        /*
+           Deux projets visibles
+           sur tablette
+        */
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
+    .contenuProjet {
+        min-height: 480px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 650px) {
+
+    .enTete {
+        padding: 30px 20px;
+    }
+
+    .gallerieProjets {
+        padding: 30px 10px;
+    }
+
+    .conteneurGallerie {
+        gap: 7px;
+    }
+
+    .projet {
+        /*
+           Un seul projet visible
+           sur téléphone
+        */
+        flex: 0 0 100%;
+    }
+
+    .flecheDeDefilement {
+        width: 38px;
+        height: 38px;
+
+        flex: 0 0 38px;
+
+        font-size: 1rem;
+    }
+
+    .imageProjet {
+        height: 200px;
+    }
+
+    .contenuProjet {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .contenuProjet h3,
+    .contenuProjet>p {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================
+   TRÈS PETITS ÉCRANS
+========================================= */
+
+@media screen and (max-width: 420px) {
+
+    .gallerieProjets {
+        padding: 25px 5px;
+    }
+
+    .flecheDeDefilement {
+        width: 32px;
+        height: 32px;
+
+        flex-basis: 32px;
+    }
+
+    .conteneurGallerie {
+        gap: 4px;
+    }
+
+}
+
+
+/* =========================================
+   ARRIÈRE-PLAN
+========================================= */
+
+body {
+    background-color: #eef2f7;
+}
+
+.projet {
+    flex: 0 0 calc((100% - 48px) / 3);
 }

@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Mawuli Marcelin Dotse">
-    <meta name="description" content="...">
-    <link rel="stylesheet" href="CSS/indexStyle.css">
+
+    <meta name="author" content="Victoire Tumene">
+
+    <meta name="description"
+        content="Portfolio personnel de Victoire Tumene, étudiante en informatique à l'Université Laval.">
+
+    <link rel="stylesheet" href="./CSS/indexStyle.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Accueil - Porte Folio</title>
+
+    <title>Accueil | Portfolio de Victoire Tumene</title>
 </head>
+
 <body>
+
+    <!-- En-tête -->
     <header>
         <div class="logo">
             <a href="index.html">
-                <i class="fas fa-pen-to-square"></i>
-                <h1>Porte Folio</h1>
+                <div class="logoSymbole">VT</div>
+
+                <div class="logoTexte">
+                    <h1>Victoire Tumene</h1>
+                    <p>Portfolio informatique</p>
+                </div>
             </a>
         </div>
     </header>
-    
+
+    <!-- Menu de navigation -->
     <nav class="menuNavigation">
         <ul>
+
             <li>
                 <div class="onglets">
-                    <a href="index.html">
-                        <i class="fas fa-home"></i>
+                    <a href="index.html" class="active">
+                        <i class="fa-solid fa-house"></i>
                         <span>Accueil</span>
                     </a>
                 </div>
@@ -33,7 +53,7 @@
             <li>
                 <div class="onglets">
                     <a href="competences.html">
-                        <i class="fas fa-code"></i>
+                        <i class="fa-solid fa-code"></i>
                         <span>Mes compétences</span>
                     </a>
                 </div>
@@ -41,8 +61,8 @@
 
             <li>
                 <div class="onglets">
-                    <a href="projets.html">
-                        <i class="fas fa-folder"></i>
+                    <a href="projects.html">
+                        <i class="fa-solid fa-folder-open"></i>
                         <span>Mes projets</span>
                     </a>
                 </div>
@@ -50,8 +70,8 @@
 
             <li>
                 <div class="onglets">
-                    <a href="a-propos.html">
-                        <i class="fas fa-user"></i>
+                    <a href="about.html">
+                        <i class="fa-solid fa-user"></i>
                         <span>À propos de moi</span>
                     </a>
                 </div>
@@ -59,140 +79,134 @@
 
             <li>
                 <div class="onglets">
-                    <a href="contacts.html">
-                        <i class="fas fa-envelope"></i>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-envelope"></i>
                         <span>Contactez-moi</span>
                     </a>
                 </div>
             </li>
+
         </ul>
     </nav>
 
+    <!-- Contenu principal -->
     <main>
+
+        <!-- Présentation -->
         <section class="carteDePresentation">
+
             <div class="texteDePresentation">
-                <h2>Mawuli Marcelin Dotse</h2>
-                <h3>Etudiant en TI à l'UQAR</h3>
-                <p>
-                    Jeune étudiant en informatique à l'UQAR campus de lévis, je suis passionné par les technologies de conception 3D de haut niveau et les suites de simulation pysique.
-                    Mon ambition à long terme est de concevoir un logiciel de modélisation, et d'expérimentation virtuelle de produits, pouvant être appliqué à tous les secteurs de production afin de minimiser les risques et les coûts liés aux étapes de conception et de test.
+
+                <p class="petitTitre">
+                    Bienvenue dans mon portfolio
                 </p>
+
+                <h2>Victoire Tumene</h2>
+
+                <h3>
+                    Étudiante en informatique à l’Université Laval
+                </h3>
+
+                <p>
+                    Je suis étudiante en informatique à l’Université Laval.
+                    Je m’intéresse au développement logiciel, à la programmation
+                    orientée objet, au développement web et à la conception
+                    d’applications informatiques.
+                </p>
+
+                <p>
+                    À travers mes études et mes projets, je développe mes
+                    compétences en programmation, en analyse de systèmes,
+                    en bases de données et en création d’interfaces utilisateur.
+                </p>
+
+                <p>
+                    Je suis actuellement à la recherche d’un stage en informatique
+                    afin de mettre mes connaissances en pratique, d’acquérir une
+                    expérience professionnelle et de contribuer à des projets
+                    technologiques concrets.
+                </p>
+
+                <a href="projets.html" class="boutonPrincipal">
+                    <i class="fa-solid fa-eye"></i>
+                    Découvrir mes projets
+                </a>
+
             </div>
+
             <div class="imageDePresentation">
-                <img src="Images/imageCarte.jpg" alt="imageCarte" title="Mawuli">
+                <img src="Images/photo.png" alt="Photo de Victoire Tumene" title="Victoire Tumene">
             </div>
+
         </section>
 
-        <section class="gallerieImages">
-            <div class="headerGallerie">
-                <h3>Mes images</h3>
-                <p>Voici quelques une de mes photos</p>
-            </div>
-            <button class="flecheDeDefilement">
-                <i class="fas fa-chevron-left"></i>
-            </button>
 
-            <div class="imagesGallerie">
-                <figure class="image">
-                    <img src="Images/imageCarte.jpg" alt="imageCarte">
-                    <figcaption class="descriptionImage">
-                        <h3>Photo style darons lol</h3>
-                        <p>
-                            Prise le lendemain de la visite de la ville de Québec.
-                        </p>
-                    </figcaption>
-                </figure>
-
-                <figure class="image">
-                    <img src="Images/feuille-erable.jpg" alt="feuille-erable">
-                    <figcaption class="descriptionImage">
-                        <h3>Photo d'une feuille d'érable ramassée au hasard</h3>
-                        <p>
-                            Prise en rentrant du campus de Lévis un après-midi d'automne.
-                        </p>
-                    </figcaption>
-                </figure>
-
-                <figure class="image">
-                    <img src="Images/soleil-Cloture.jpg" alt="soleil-Cloture">
-                    <figcaption class="descriptionImage3">
-                        <h3>Coucher de soleil et cloture du terrain de foot du collège de Lévis</h3>
-                        <p>
-                            Prise un soir en rentrant du campus de Lévis.
-                        </p>
-                    </figcaption>
-                </figure>
-
-                <figure class="image">
-                    <img src="Images/marche.jpg" alt="Promenade">
-                    <figcaption class="descriptionImage4">
-                        <h3>Promenade</h3>
-                        <p>
-                            Prise un soir en rentrant du campus de Lévis.
-                        </p>
-                    </figcaption>
-                </figure>
-
-                <figure class="image">
-                    <img src="Images/escalierRouge-Terminus.jpg" alt="escalierRouge - Terminus de la traverse">
-                    <figcaption class="descriptionImage5">
-                        <h3>Photo du terminus de la traverse de Lévis</h3>
-                        <p>
-                            prise un soir d'hiver après être descendu de l'autobus.
-                        </p>
-                    </figcaption>
-                </figure>
-
-                <figure class="image">
-                    <img src="Images/porteChaussures.jpg" alt="priseInsolite">
-                    <figcaption class="descriptionImage">
-                        <h3>Photo anodine</h3>
-                        <p>
-                            Prise durant une journée de vacances à la maison.
-                        </p>
-                </figure>
-            </div>
-
-            <button class="flecheDeDefilement">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </section>
-
-        <section class="audioDePresentation">
-            <h3>Ecoutez-moi !</h3>
-            <div class="contenuAudio">
-                <i class="fas fa-headphones"></i>
-                <audio controls>
-                    <source src="Audios/audioPortefolio.m4a">
-                </audio>
-            </div>
-        </section>
 
     </main>
+
+    <!-- Pied de page -->
     <footer>
+
         <div class="newsLetter">
+
             <i class="fa-regular fa-newspaper"></i>
-            <h2>Newsletters</h2>
-            <p>Abonnez-vous à mon infolettre pour rester informer de mes projets et réalisations !</p>
+
+            <h2>Infolettre</h2>
+
+            <p>
+                Abonnez-vous à mon infolettre pour rester informé
+                de mes projets et de mes nouvelles réalisations.
+            </p>
+
         </div>
 
         <div class="formulaire">
-            <form>
-                <label for="id_Courriel">Courriel : </label>
-                <input type="email" id="id_Courriel" name="courriel" placeholder="Entrez votre courriel"><br><br>
+
+            <form action="#" method="post">
+
+                <label for="idCourriel">
+                    Courriel :
+                </label>
+
+                <input type="email" id="idCourriel" name="courriel" placeholder="Entrez votre adresse courriel"
+                    required>
+
+                <button type="submit">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>S’abonner</span>
+                </button>
+
             </form>
-            <button>
-                <i class="fa-regular fa-bell"></i>
-                <span>S'abonner</span>
-            </button>
+
         </div>
 
         <div class="reseauxSociaux">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tumblr.com/"><i class="fa-brands fa-tumblr"></i></a>
+
+            <a href="https://www.linkedin.com/in/victoire-tumene-tsakou-9b5057321" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn de Victoire Tumene">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
         </div>
+
+        <p class="copyright">
+            &copy; 2026 Victoire Tumene — Tous droits réservés.
+        </p>
+
     </footer>
+
 </body>
+
 </html>

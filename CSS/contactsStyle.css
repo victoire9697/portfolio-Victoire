@@ -115,3 +115,22 @@
     font-size: 1rem;
     resize: vertical;
 }
+@media (max-width: 1080px) {
+    .contactezMoi {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .contactezMoi address {
+        margin-bottom: 2rem;
+    }
+
+    .contactezMoi iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .formulaireJoinUs form {
+        padding: 1rem;
+    }
+}

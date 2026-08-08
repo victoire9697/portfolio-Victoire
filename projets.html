@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Mawuli Marcelin Dotse">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="CSS/projetsStyle.css">
+
+    <meta name="author" content="Victoire Tumene">
+
+    <meta name="description"
+        content="Projets informatiques réalisés par Victoire Tumene dans le cadre de sa formation en informatique.">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="CSS/indexStyle.css">
+    <link rel="stylesheet" href="CSS/projetsStyle.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Projets - Porte Folio</title>
+
+    <title>Mes projets | Victoire Tumene</title>
 </head>
+
 <body>
+
+    <!-- =========================
+         EN-TÊTE
+    ========================== -->
+
     <header>
+
         <div class="logo">
+
             <a href="index.html">
-                <i class="fas fa-pen-to-square"></i>
-                <h1>Porte Folio</h1>
+
+                <div class="logoSymbole">
+                    VT
+                </div>
+
+                <div class="logoTexte">
+                    <h1>Victoire Tumene</h1>
+                    <p>Portfolio informatique</p>
+                </div>
+
             </a>
+
         </div>
+
     </header>
 
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <nav class="menuNavigation">
+
         <ul>
+
             <li>
                 <div class="onglets">
                     <a href="index.html">
-                        <i class="fas fa-home"></i>
+                        <i class="fa-solid fa-house"></i>
                         <span>Accueil</span>
                     </a>
                 </div>
@@ -34,7 +69,7 @@
             <li>
                 <div class="onglets">
                     <a href="competences.html">
-                        <i class="fas fa-code"></i>
+                        <i class="fa-solid fa-code"></i>
                         <span>Mes compétences</span>
                     </a>
                 </div>
@@ -42,129 +77,824 @@
 
             <li>
                 <div class="onglets">
-                    <a href="projets.html">
-                        <i class="fas fa-folder"></i>
+                    <a href="projets.html" class="active">
+                        <i class="fa-solid fa-folder-open"></i>
                         <span>Mes projets</span>
                     </a>
                 </div>
             </li>
-            
+
             <li>
                 <div class="onglets">
                     <a href="a-propos.html">
-                        <i class="fas fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
                         <span>À propos de moi</span>
                     </a>
+                </div>
             </li>
 
             <li>
                 <div class="onglets">
                     <a href="contacts.html">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fa-solid fa-envelope"></i>
                         <span>Contactez-moi</span>
                     </a>
                 </div>
+            </li>
+
+        </ul>
+
     </nav>
 
+
+    <!-- =========================
+         CONTENU PRINCIPAL
+    ========================== -->
+
     <main>
-        <div class="enTete">
-            <h2>Mes Projets</h2>
+
+        <!-- Présentation de la page -->
+
+        <section class="enTete">
+
+            <p class="petitTitre">
+                Mes réalisations
+            </p>
+
+            <h2>Mes projets informatiques</h2>
+
             <p>
-                Bienvenue sur la page de mes projets. Ici, vous trouverez une sélection de projets sur lesquels j'ai travaillé, 
-                mettant en avant mes compétences et mon expertise dans divers domaines.
-            </p>  
-        </div>
+                Cette page présente quelques projets réalisés au cours
+                de ma formation universitaire. Ils illustrent mes compétences
+                en développement web, programmation orientée objet,
+                Python, C++, bases de données, conception de systèmes
+                et analyse informatique.
+            </p>
 
-        <section class="gallerieImages">
-            <div class="headerGallerie">
-                <h3>Ma gallerie de Projets</h3>
-                <p>Voici quelques photo illustratives avec description des mes projets :</p>
-            </div>
-            <button class="flecheDeDefilement">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <div class="imagesGallerie">
-
-                <a href="https://youtu.be/UqUNUODVCyU?si=rAEpg0XOEZLlVpN2" target="_blank">
-                    <figure class="image">
-                    <img src="Images/imageModelisation3D.png" alt="imageModelisation3D">
-                        <figcaption class="descriptionImage">
-                            <h3>Conception logiciel 3D</h3>
-                            <p>
-                                Projet de conception de logiciel de modélisation et de simulation d'objets physiques en 3D
-                            </p>
-                        </figcaption>
-                    </figure>
-                </a>
-                
-                <a href="https://youtu.be/kARkOdRHaj8?si=Nm5Sui-3r-g0yl0r" target="_blank">
-                    <figure class="image">
-                    <img src="Images/imageManagement.jpg" alt="imageManagement">
-                        <figcaption class="descriptionImage">
-                            <h3>Compétences en Management</h3>
-                            <p>
-                                Apprentissage en autodidacte des bons principes, attitudes et statégies de management efficients.
-                            </p>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a href="https://youtu.be/Zlc2mVGvlWM?si=MoEHwPdVHmoe-6-f" target="_blank">
-                    <figure class="image">
-                    <img src="Images/imageEcoresponsable.jpg" alt="imageEcoresponsable">
-                        <figcaption class="descriptionImage">
-                            <h3>Solutions Eco-responsables</h3>
-                            <p>
-                                Ambition de toujours créer des solutions écoèresponsables car "L'évolution rapide est bien mais l'évolution perpétuelle est meilleure."
-                            </p>
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a href="Images/ImageDream.jpg">
-                    <figure class="image">
-                    <img src="Images/ImageDream.jpg" alt="ImageDream">
-                        <figcaption class="descriptionImage">
-                            <h3>Only my dream keeps me alive</h3>
-                            <p>
-                                Vivez pour vos rêves et vos rêves vivront pour vous.
-                            </p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <button class="flecheDeDefilement">
-                <i class="fas fa-chevron-right"></i>
-            </button>
         </section>
+
+
+        <!-- =========================
+             GALERIE DE PROJETS
+        ========================== -->
+
+        <section class="gallerieProjets">
+
+            <div class="headerGallerie">
+
+                <h2>Galerie de projets</h2>
+
+                <p>
+                    Découvrez quelques-uns des projets techniques
+                    que j’ai réalisés.
+                </p>
+
+            </div>
+
+
+            <div class="conteneurGallerie">
+
+                <!-- Flèche gauche -->
+
+                <button class="flecheDeDefilement" id="boutonPrecedent" type="button" aria-label="Projet précédent">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+
+                <!-- Projets -->
+
+                <div class="imagesGallerie" id="imagesGallerie">
+
+
+                    <!-- =========================
+                         PROJET 1
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/projet-flask.jpg" alt="Application web de vente de fournitures scolaires">
+
+                            <span class="categorieProjet">
+                                Développement Web
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Application web de vente de fournitures scolaires
+                            </h3>
+
+                            <p>
+                                Développement d’une application web full stack
+                                permettant de gérer la vente de fournitures
+                                scolaires.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Architecture web trois tiers
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Backend développé avec Flask
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Base de données MySQL
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Requêtes SQL avancées
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>MySQL</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/projet-flask.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 2
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/demineur.jpg" alt="Jeu Démineur développé en programmation orientée objet">
+
+                            <span class="categorieProjet">
+                                C++
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Jeu Démineur
+                            </h3>
+
+                            <p>
+                                Développement d’un jeu complet utilisant
+                                les principes de la programmation orientée objet.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Conception des classes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Héritage et polymorphisme
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Gestion de la logique du jeu
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Interface graphique interactive
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>C++</span>
+                                <span>POO</span>
+                                <span>STL</span>
+                                <span>GitHub</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/demineur.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 3
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/gestion-vehicules.jpg" alt="Système de gestion de véhicules en C++">
+
+                            <span class="categorieProjet">
+                                Programmation
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Système de gestion de véhicules
+                            </h3>
+
+                            <p>
+                                Conception d’un programme C++ permettant
+                                de représenter et gérer différents véhicules
+                                à l’aide de classes et d’objets.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Programmation orientée objet
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Gestion dynamique des objets
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Utilisation de STL
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Tests des fonctionnalités
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>C++</span>
+                                <span>STL</span>
+                                <span>POO</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/gestion-vehicules.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 4
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/calcul-academique.jpg" alt="Application Python de calcul académique">
+
+                            <span class="categorieProjet">
+                                Python
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Application de calcul académique
+                            </h3>
+
+                            <p>
+                                Développement d’une application Python
+                                permettant de calculer une moyenne académique
+                                pondérée à partir des résultats d’un étudiant.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Calcul de moyenne pondérée
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Validation des données
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Gestion des erreurs
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Interface interactive en console
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>Python</span>
+                                <span>Algorithmique</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/calcul-academique.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 5
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/autocompletion.jpg"
+                                alt="Assistant intelligent d'auto-complétion en Python">
+
+                            <span class="categorieProjet">
+                                Intelligence artificielle
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Assistant d’auto-complétion intelligent
+                            </h3>
+
+                            <p>
+                                Création d’un programme Python capable
+                                d’analyser un corpus de texte et de proposer
+                                automatiquement des mots suivants.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Analyse de corpus
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Modèle basé sur les bigrammes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Génération automatique de texte
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Traitement de données textuelles
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>Python</span>
+                                <span>Bigrammes</span>
+                                <span>NLP</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/autocompletion.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 6
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/code-route.jpg" alt="Application web de quiz sur le code de la route">
+
+                            <span class="categorieProjet">
+                                Web
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Quiz interactif sur le code de la route
+                            </h3>
+
+                            <p>
+                                Développement d’une application web interactive
+                                permettant aux utilisateurs de tester leurs
+                                connaissances sur le code de la route.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Questions interactives
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Validation des réponses
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Affichage des résultats
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Interface utilisateur intuitive
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>jQuery</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/code-route.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 7
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/matlab-signaux.jpg" alt="Simulation de signaux électriques avec MATLAB">
+
+                            <span class="categorieProjet">
+                                MATLAB
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Simulation de signaux électriques
+                            </h3>
+
+                            <p>
+                                Projet de simulation et d’analyse de signaux
+                                électriques réalisé avec MATLAB.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Simulation de signaux AC
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Analyse de fréquence
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Analyse d’amplitude et période
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Création de graphiques
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>MATLAB</span>
+                                <span>Simulation</span>
+                                <span>Électrotechnique</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/matlab.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         PROJET 8
+                    ========================== -->
+
+                    <article class="projet">
+
+                        <div class="imageProjet">
+
+                            <img src="Images/uml.jpg" alt="Analyse et conception de systèmes avec UML">
+
+                            <span class="categorieProjet">
+                                Analyse
+                            </span>
+
+                        </div>
+
+                        <div class="contenuProjet">
+
+                            <h3>
+                                Analyse et conception de systèmes
+                            </h3>
+
+                            <p>
+                                Projet de modélisation de systèmes
+                                informatiques et de processus d’affaires.
+                            </p>
+
+                            <ul class="detailsProjet">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Diagrammes UML
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Diagrammes de classes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Diagrammes de séquence
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Modélisation ANSI
+                                </li>
+
+                            </ul>
+
+                            <div class="technologies">
+
+                                <span>UML</span>
+                                <span>ANSI</span>
+                                <span>MCD</span>
+                                <span>MLD</span>
+
+                            </div>
+
+                            <a class="voirProjetButton" href="Videos/analyse-systeme.mp4" target="_blank">
+
+                                Voir le projet
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Flèche droite -->
+
+                <button class="flecheDeDefilement" id="boutonSuivant" type="button" aria-label="Projet suivant">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- =========================
+         PIED DE PAGE
+    ========================== -->
+
     <footer>
+
         <div class="newsLetter">
+
             <i class="fa-regular fa-newspaper"></i>
-            <h2>Newsletters</h2>
-            <p>Abonnez-vous à mon infolettre pour rester informer de mes projets et réalisations !</p>
+
+            <h2>Infolettre</h2>
+
+            <p>
+                Abonnez-vous à mon infolettre pour rester informé
+                de mes projets et de mes nouvelles réalisations.
+            </p>
+
         </div>
+
 
         <div class="formulaire">
-            <form>
-                <label for="id_Courriel">Courriel : </label>
-                <input type="email" id="id_Courriel" name="courriel" placeholder="Entrez votre courriel"><br><br>
+
+            <form action="#" method="post">
+
+                <label for="id_Courriel">
+                    Courriel :
+                </label>
+
+                <input type="email" id="id_Courriel" name="courriel" placeholder="Entrez votre courriel" required>
+
+                <button type="submit">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        S’abonner
+                    </span>
+
+                </button>
+
             </form>
-            <button>
-                <i class="fa-regular fa-bell"></i>
-                <span>S'abonner</span>
-            </button>
+
         </div>
 
+
         <div class="reseauxSociaux">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tumblr.com/"><i class="fa-brands fa-tumblr"></i></a>
+
+            <a href="https://www.linkedin.com/in/victoire-tumene-tsakou-9b5057321" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn de Victoire Tumene">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
         </div>
+
+
+        <p class="copyright">
+            &copy; 2026 Victoire Tumene — Tous droits réservés.
+        </p>
+
     </footer>
+
+
+    <script>
+        const projets = document.querySelectorAll(".projet");
+        const boutonPrecedent = document.getElementById("boutonPrecedent");
+        const boutonSuivant = document.getElementById("boutonSuivant");
+
+        let position = 0;
+
+        function afficherProjets() {
+
+            // Cacher tous les projets
+            projets.forEach(function (projet) {
+                projet.style.display = "none";
+            });
+
+            // Afficher 3 projets à partir de la position actuelle
+            for (let i = position; i < position + 3; i++) {
+
+                if (projets[i]) {
+                    projets[i].style.display = "block";
+                }
+            }
+        }
+
+
+        // FLÈCHE DROITE
+        boutonSuivant.addEventListener("click", function () {
+
+            if (position < projets.length - 3) {
+                position++;
+            } else {
+                position = 0;
+            }
+
+            afficherProjets();
+        });
+
+
+        // FLÈCHE GAUCHE
+        boutonPrecedent.addEventListener("click", function () {
+
+            if (position > 0) {
+                position--;
+            } else {
+                position = projets.length - 3;
+            }
+
+            afficherProjets();
+        });
+
+
+        // Affichage initial
+        afficherProjets();
+    </script>
+
 </body>
+
 </html>

@@ -1,161 +1,609 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Mawuli Marcelin Dotse">
-    <meta name="description" content="...">
+
+    <meta name="author" content="Victoire Tumene">
+
+    <meta name="description"
+        content="Compétences informatiques de Victoire Tumene, étudiante en informatique à l'Université Laval.">
+
     <link rel="stylesheet" href="CSS/competencesStyle.css">
-    <link rel="stylesheet" href="CSS/indexStyle.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Compétences - Porte Folio</title>
+
+    <title>Mes compétences | Victoire Tumene</title>
 </head>
 
 <body>
+
+    <!-- En-tête -->
     <header>
         <div class="logo">
             <a href="index.html">
-                <i class="fas fa-pen-to-square"></i>
-                <h1>Porte Folio</h1>
+
+                <div class="logoSymbole">
+                    VT
+                </div>
+
+                <div class="logoTexte">
+                    <h1>Victoire Tumene</h1>
+                    <p>Portfolio informatique</p>
+                </div>
+
             </a>
         </div>
     </header>
-    
+
+    <!-- Navigation -->
     <nav class="menuNavigation">
         <ul>
+
             <li>
-                <div class="onglets">
-                    <a href="index.html">
-                        <i class="fas fa-home"></i>
-                        <span>Accueil</span>
-                    </a>
-                </div>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Accueil</span>
+                </a>
             </li>
 
             <li>
-                <div class="onglets">
-                    <a href="competences.html">
-                        <i class="fas fa-code"></i>
-                        <span>Mes compétences</span>
-                    </a>
-                </div>
+                <a href="competences.html" class="active">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Mes compétences</span>
+                </a>
             </li>
 
             <li>
-                <div class="onglets">
-                    <a href="projets.html">
-                        <i class="fas fa-folder"></i>
-                        <span>Mes projets</span>
-                    </a>
-                </div>
+                <a href="projets.html">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Mes projets</span>
+                </a>
             </li>
 
             <li>
-                <div class="onglets">
-                    <a href="a-propos.html">
-                        <i class="fas fa-user"></i>
-                        <span>À propos de moi</span>
-                    </a>
-                </div>
+                <a href="a-propos.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>À propos de moi</span>
+                </a>
             </li>
 
             <li>
-                <div class="onglets">
-                    <a href="contacts.html">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contactez-moi</span>
-                    </a>
-                </div>
+                <a href="contacts.html">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contactez-moi</span>
+                </a>
             </li>
+
         </ul>
     </nav>
 
     <main>
+
+        <!-- Introduction -->
         <section class="introductionCompetences">
-            <h2>Mes compétences</h2>
+
+            <p class="sousTitre">
+                Mon profil technique
+            </p>
+
+            <h2>Mes compétences informatiques</h2>
+
             <p>
-                Voici un aperçu de mes compétences techniques et professionnelles que j'ai acquises au fil du temps. Ces compétences me permettent de relever divers défis et de contribuer efficacement à des projets variés.
+                Ma formation en informatique à l’Université Laval ainsi que
+                mes études antérieures en électrotechnique m’ont permis de
+                développer des compétences en programmation, développement
+                web, bases de données, analyse de systèmes, réseaux,
+                intelligence artificielle et soutien informatique.
             </p>
 
         </section>
 
+        <!-- Grille des compétences -->
         <section class="grilleCompetences">
-            <figure class="image">
-                <img src="Images/ImageC-Sharp.png" alt="ImageC-Sharp">
-                <figcaption class="descriptionImage">
-                    <h3>Nivau avancé en C-sharp</h3>
-                    <p>
-                        Excellente maitrise du langage de programmatioin C-sharp et grande familiarité avec l'environnement Visual Studio
-                    </p>
-                </figcaption>
-            </figure>
 
-            <figure class="image">
-                <img src="Images/imageUML.jpg" alt="imageUML">
-                <figcaption class="descriptionImage">
-                    <h3>Niveau intermédiaire en modelisation UML</h3>
-                    <p>
-                        Bonne connaissance des diagrammes UML pour la modélisation et la conception de systèmes logiciels
-                    </p>
-                </figcaption>
-            </figure>
-                
-            <figure class="image">
-                <img src="Images/imageSQL.png" alt="imageSQL">
-                <figcaption class="descriptionImage">
-                    <h3>Niveau debutant du SQL</h3>
-                    <p>
-                        Bonne connaissance des commandes de base du langage SQL pour la gestion et la manipulation des bases de données relationnelles
-                    </p>
-                </figcaption>
-            </figure>
+            <!-- Programmation -->
+            <article class="carteCompetence">
 
-            <figure class="image">
-                <img src="Images/imageWebDesign.jpg" alt="imageWebDesign">
-                <figcaption class="descriptionImage">
-                    <h3>Niveau intermediaire en Conception de pages Web</h3>
-                    <p>
-                        Bonne connaissance des langages HTML et CSS pour la création de pages Web attrayantes et fonctionnelles
-                    </p>
-                </figcaption>
-            </figure>
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-code"></i>
+                </div>
 
-            <figure class="image">
-                <img src="Images/imageAI.jpg" alt="imageAI">
-                <figcaption class="descriptionImage">
-                    <h3>Grande affinité avec les outils d'IA</h3>
-                    <p>
-                        Excellente capacité à utiliser des outils d'intelligence artificielle pour améliorer la productivité et la créativité dans divers domaines
-                    </p>
-                </figcaption>
-            </figure>
+                <h3>Programmation</h3>
+
+                <p>
+                    Conception de programmes et d’applications en utilisant
+                    plusieurs langages de programmation.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>C#</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <ul>
+                    <li>Programmation orientée objet</li>
+                    <li>Héritage et polymorphisme</li>
+                    <li>Gestion de la mémoire</li>
+                    <li>Utilisation de la bibliothèque STL</li>
+                    <li>Validation des entrées utilisateur</li>
+                    <li>Gestion des erreurs</li>
+                    <li>Tests unitaires</li>
+                </ul>
+
+            </article>
+
+            <!-- Développement web -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <h3>Développement web</h3>
+
+                <p>
+                    Création d’interfaces web responsives et développement
+                    d’applications web dynamiques.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Flask</span>
+                    <span>jQuery</span>
+                </div>
+
+                <ul>
+                    <li>Conception de sites web responsives</li>
+                    <li>Création d’interfaces utilisateur</li>
+                    <li>Développement frontend</li>
+                    <li>Développement backend avec Flask</li>
+                    <li>Architecture web trois tiers</li>
+                    <li>Affichage dynamique des résultats</li>
+                </ul>
+
+            </article>
+
+            <!-- Bases de données -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <h3>Bases de données</h3>
+
+                <p>
+                    Conception, gestion et interrogation de bases de données
+                    relationnelles.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>DBeaver</span>
+                </div>
+
+                <ul>
+                    <li>Création et gestion de bases de données</li>
+                    <li>Requêtes SQL avancées</li>
+                    <li>Modélisation des données</li>
+                    <li>Création de modèles conceptuels de données</li>
+                    <li>Création de modèles logiques de données</li>
+                    <li>Optimisation des structures d’information</li>
+                </ul>
+
+            </article>
+
+            <!-- Données et intelligence artificielle -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <h3>Données et intelligence artificielle</h3>
+
+                <p>
+                    Analyse, traitement et exploitation de données avec
+                    des outils Python.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>Pandas</span>
+                    <span>TensorFlow</span>
+                    <span>Python</span>
+                    <span>IA</span>
+                </div>
+
+                <ul>
+                    <li>Analyse et manipulation de données</li>
+                    <li>Traitement de corpus textuels</li>
+                    <li>Création de modèles basés sur les bigrammes</li>
+                    <li>Génération automatique de texte</li>
+                    <li>Notions d’apprentissage automatique</li>
+                    <li>Utilisation de solutions d’intelligence artificielle</li>
+                </ul>
+
+            </article>
+
+            <!-- Analyse et conception -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-diagram-project"></i>
+                </div>
+
+                <h3>Analyse et conception de systèmes</h3>
+
+                <p>
+                    Analyse des besoins et modélisation de solutions
+                    informatiques.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>UML</span>
+                    <span>ANSI</span>
+                    <span>MCD</span>
+                    <span>MLD</span>
+                </div>
+
+                <ul>
+                    <li>Analyse des besoins</li>
+                    <li>Diagrammes de classes UML</li>
+                    <li>Diagrammes de séquence UML</li>
+                    <li>Modélisation de processus d’affaires</li>
+                    <li>Notation ANSI</li>
+                    <li>Conception d’architectures orientées objet</li>
+                </ul>
+
+            </article>
+
+            <!-- Réseaux -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <h3>Réseaux informatiques</h3>
+
+                <p>
+                    Compréhension des concepts fondamentaux de réseaux
+                    et de configuration des protocoles.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>TCP/IP</span>
+                    <span>OSPF</span>
+                    <span>EIGRP</span>
+                    <span>DHCP</span>
+                </div>
+
+                <ul>
+                    <li>Configuration des protocoles de routage</li>
+                    <li>Notions de NAT et PAT</li>
+                    <li>Configuration DHCP</li>
+                    <li>Gestion des listes d’accès</li>
+                    <li>Administration de réseaux informatiques</li>
+                    <li>Diagnostic de problèmes de connexion</li>
+                </ul>
+
+            </article>
+
+            <!-- Soutien informatique -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h3>Soutien informatique</h3>
+
+                <p>
+                    Assistance aux utilisateurs et prise en main
+                    d’ordinateurs à distance.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>TeamViewer</span>
+                    <span>Quick Assist</span>
+                    <span>Dameware</span>
+                    <span>RDP</span>
+                </div>
+
+                <ul>
+                    <li>Prise en main à distance</li>
+                    <li>Assistance technique aux utilisateurs</li>
+                    <li>Application de procédures opérationnelles IT</li>
+                    <li>Diagnostic de problèmes informatiques</li>
+                    <li>Installation et configuration de logiciels</li>
+                    <li>Communication avec les utilisateurs</li>
+                </ul>
+
+            </article>
+
+            <!-- Systèmes -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+
+                <h3>Systèmes d’exploitation</h3>
+
+                <p>
+                    Utilisation et configuration de différents environnements
+                    informatiques.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>Windows 7</span>
+                    <span>Windows 8</span>
+                    <span>Windows 10</span>
+                    <span>Windows 11</span>
+                    <span>macOS</span>
+                </div>
+
+                <ul>
+                    <li>Utilisation quotidienne de Windows</li>
+                    <li>Utilisation de macOS</li>
+                    <li>Gestion de fichiers et dossiers</li>
+                    <li>Installation d’applications</li>
+                    <li>Configuration des paramètres système</li>
+                </ul>
+
+            </article>
+
+            <!-- Git et outils numériques -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+
+                <h3>Git et outils numériques</h3>
+
+                <p>
+                    Gestion de versions, collaboration et utilisation
+                    de plateformes numériques.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Cloud</span>
+                    <span>Visual Studio Code</span>
+                </div>
+
+                <ul>
+                    <li>Gestion de code source avec GitHub</li>
+                    <li>Création et suivi des issues</li>
+                    <li>Correction des anomalies</li>
+                    <li>Validation des solutions</li>
+                    <li>Travail collaboratif</li>
+                    <li>Amélioration continue du code</li>
+                </ul>
+
+            </article>
+
+            <!-- Microsoft Office -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-file-word"></i>
+                </div>
+
+                <h3>Suite Microsoft Office</h3>
+
+                <p>
+                    Utilisation des principaux outils bureautiques
+                    et collaboratifs.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>Word</span>
+                    <span>Excel</span>
+                    <span>Outlook</span>
+                    <span>Teams</span>
+                    <span>MS Project</span>
+                </div>
+
+                <ul>
+                    <li>Création et mise en forme de documents</li>
+                    <li>Utilisation de feuilles de calcul</li>
+                    <li>Gestion des courriels</li>
+                    <li>Collaboration avec Microsoft Teams</li>
+                    <li>Planification de projets</li>
+                </ul>
+
+            </article>
+
+            <!-- MATLAB et électrotechnique -->
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-wave-square"></i>
+                </div>
+
+                <h3>MATLAB et électrotechnique</h3>
+
+                <p>
+                    Modélisation et analyse de signaux électriques
+                    avec MATLAB.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>MATLAB</span>
+                    <span>Simulation</span>
+                    <span>Signaux AC</span>
+                </div>
+
+                <ul>
+                    <li>Développement de scripts MATLAB</li>
+                    <li>Simulation de signaux électriques</li>
+                    <li>Création de graphiques</li>
+                    <li>Analyse de fréquence et d’amplitude</li>
+                    <li>Étude de la période des signaux</li>
+                    <li>Interprétation des résultats</li>
+                </ul>
+
+            </article>
+
+            <!-- Cybersécurité -->
+
+            <article class="carteCompetence">
+
+                <div class="iconeCompetence">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>Sécurité informatique</h3>
+
+                <p>
+                    Connaissances fondamentales en protection des systèmes
+                    d'information, analyse des risques et sécurisation
+                    des applications et des infrastructures.
+                </p>
+
+                <div class="listeTechnologies">
+                    <span>Cybersécurité</span>
+                    <span>Cryptographie</span>
+                    <span>PKI</span>
+                    <span>Firewall</span>
+                    <span>Authentification</span>
+                    <span>Audit</span>
+                </div>
+
+                <ul>
+                    <li>
+                        Analyse des risques et normes de sécurité
+                    </li>
+
+                    <li>
+                        Cryptographie, authentification et PKI
+                    </li>
+
+                    <li>
+                        Sécurité réseau, pare-feu et contrôle d’accès
+                    </li>
+
+                    <li>
+                        Sécurité Web, audits et détection d’intrusions
+                    </li>
+                </ul>
+
+            </article>
+
+            <!-- Langues -->
+            <section class="sectionLangues">
+
+                <div class="titreSection">
+                    <i class="fa-solid fa-language"></i>
+
+                    <div>
+                        <p>Communication</p>
+                        <h2>Langues</h2>
+                    </div>
+                </div>
+
+                <div class="grilleLangues">
+
+                    <article class="langue">
+                        <h3>Français</h3>
+                        <p>Langue maternelle</p>
+                        <div class="niveau">
+                            <span style="width: 100%;"></span>
+                        </div>
+                    </article>
+
+                    <article class="langue">
+                        <h3>Allemand</h3>
+                        <p>Courant — niveau C2</p>
+                        <div class="niveau">
+                            <span style="width: 95%;"></span>
+                        </div>
+                    </article>
+
+                    <article class="langue">
+                        <h3>Anglais</h3>
+                        <p>Niveau professionnel</p>
+                        <div class="niveau">
+                            <span style="width: 80%;"></span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
         </section>
     </main>
 
+    <!-- Pied de page -->
     <footer>
+
         <div class="newsLetter">
             <i class="fa-regular fa-newspaper"></i>
-            <h2>Newsletters</h2>
-            <p>Abonnez-vous à mon infolettre pour rester informer de mes projets et réalisations !</p>
+
+            <h2>Infolettre</h2>
+
+            <p>
+                Abonnez-vous pour rester informé de mes projets
+                et de mes nouvelles réalisations.
+            </p>
         </div>
 
         <div class="formulaire">
-            <form>
-                <label for="id_Courriel">Courriel : </label>
-                <input type="email" id="id_Courriel" name="courriel" placeholder="Entrez votre courriel"><br><br>
+            <form action="#" method="post">
+
+                <label for="courriel">
+                    Courriel :
+                </label>
+
+                <input type="email" id="courriel" name="courriel" placeholder="Entrez votre adresse courriel" required>
+
+                <button type="submit">
+                    <i class="fa-regular fa-bell"></i>
+                    S’abonner
+                </button>
+
             </form>
-            <button>
-                <i class="fa-regular fa-bell"></i>
-                <span>S'abonner</span>
-            </button>
         </div>
 
         <div class="reseauxSociaux">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tumblr.com/"><i class="fa-brands fa-tumblr"></i></a>
+
+            <a href="https://www.linkedin.com/in/victoire-tumene-tsakou-9b5057321" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn de Victoire Tumene">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
         </div>
+
+        <p class="copyright">
+            &copy; 2026 Victoire Tumene — Tous droits réservés.
+        </p>
+
     </footer>
+
 </body>
+
 </html>
