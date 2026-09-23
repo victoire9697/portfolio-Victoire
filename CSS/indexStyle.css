@@ -2,9 +2,7 @@
    RÉINITIALISATION
 ================================ */
 
-body {
-    background-color: rgb(0, 255, 195) !important;
-}
+
 
 * {
     margin: 0;
@@ -64,10 +62,34 @@ header {
     font-size: 2rem;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
+.logoTexte h1 {
+    color: #111827;
+    font-size: 1.5rem;
 }
 
+.logoTexte p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.logoSymbole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 14px;
+
+    background-color: #bd1e2d;
+    color: #ffffff;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    box-shadow: 0 6px 15px rgba(189, 30, 45, 0.25);
+}
 
 /* ================================
    NAVIGATION
@@ -360,9 +382,11 @@ footer {
    RESPONSIVE MOBILE
 ================================ */
 
+
 @media screen and (max-width: 600px) {
 
     header {
+        padding: 12px 15px;
         text-align: center;
     }
 
@@ -370,7 +394,21 @@ footer {
         justify-content: center;
     }
 
+    .logoTexte h1 {
+        font-size: 1.2rem;
+    }
+
+    .logoTexte p {
+        font-size: 0.8rem;
+    }
+
+    .logoSymbole {
+        width: 48px;
+        height: 48px;
+    }
+
     .menuNavigation ul {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -380,89 +418,68 @@ footer {
     }
 
     .onglets a {
-        font-size: 0.9rem;
-        padding: 13px 6px;
+        font-size: 0.8rem;
+        padding: 11px 4px;
+        gap: 5px;
     }
 
     main {
-        width: 95%;
-        margin-top: 25px;
+        width: 94%;
+        margin: 20px auto;
     }
 
-    .carteDePresentation,
-    .gallerieImages,
-    .audioDePresentation {
+    .carteDePresentation {
         padding: 25px 18px;
+        gap: 25px;
+    }
+
+    .texteDePresentation h2 {
+        font-size: 2rem;
+    }
+
+    .texteDePresentation h3 {
+        font-size: 1.1rem;
+    }
+
+    .texteDePresentation p {
+        font-size: 0.95rem;
     }
 
     .imageDePresentation img {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
+        border-width: 5px;
     }
 
-    .conteneurGallerie {
-        align-items: stretch;
+    .boutonPrincipal {
+        padding: 11px 16px;
+        font-size: 0.9rem;
     }
 
-    .imagesGallerie {
-        grid-template-columns: 1fr;
+    .audioDePresentation {
+        padding: 25px 15px;
     }
 
-    .flecheDeDefilement {
-        width: 40px;
-        height: 40px;
-        margin-top: 90px;
+    .contenuAudio audio {
+        width: 100%;
+    }
+
+    footer {
+        padding: 35px 15px 20px;
     }
 
     .formulaire form {
         flex-direction: column;
+        width: 100%;
     }
 
     .formulaire input,
     .formulaire button {
         width: 100%;
+        min-width: 0;
     }
-}
 
-.logo a {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    text-decoration: none;
-}
-
-.logoSymbole {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 58px;
-    height: 58px;
-    border-radius: 14px;
-    background-color: #b1202d;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: bold;
-    box-shadow: 0 6px 15px rgba(177, 32, 45, 0.25);
-}
-
-.logoTexte h1 {
-    margin: 0;
-    color: #111827;
-    font-size: 1.5rem;
-}
-
-.logoTexte p {
-    margin: 0;
-    color: #64748b;
-    font-size: 0.9rem;
-}
-
-.imageDePresentation img {
-    width: 340px;
-    height: 340px;
-    margin: 0 auto;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 8px solid #f2d6d9;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    .reseauxSociaux {
+        flex-wrap: wrap;
+    }
 }

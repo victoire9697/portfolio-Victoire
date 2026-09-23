@@ -1,6 +1,41 @@
 /* =========================================
    EN-TÊTE DE LA PAGE PROJETS
 ========================================= */
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logoSymbole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 14px;
+
+    background-color: #bd1e2d;
+    color: #ffffff;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    box-shadow: 0 6px 15px rgba(189, 30, 45, 0.25);
+}
+
+.logoTexte h1 {
+    color: #111827;
+    font-size: 1.5rem;
+}
+
+.logoTexte p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
 
 .enTete {
     margin-bottom: 45px;
@@ -419,41 +454,32 @@
 @media screen and (max-width: 650px) {
 
     .enTete {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+
+    .enTete h2 {
+        font-size: 2rem;
     }
 
     .gallerieProjets {
-        padding: 30px 10px;
+        padding: 25px 10px;
     }
 
     .conteneurGallerie {
-        gap: 7px;
+        gap: 5px;
     }
 
     .projet {
-        /*
-           Un seul projet visible
-           sur téléphone
-        */
         flex: 0 0 100%;
     }
 
-    .flecheDeDefilement {
-        width: 38px;
-        height: 38px;
-
-        flex: 0 0 38px;
-
-        font-size: 1rem;
-    }
-
     .imageProjet {
-        height: 200px;
+        height: 190px;
     }
 
     .contenuProjet {
         min-height: auto;
-        padding: 20px;
+        padding: 18px;
     }
 
     .contenuProjet h3,
@@ -461,8 +487,13 @@
         min-height: auto;
     }
 
+    .flecheDeDefilement {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
+        font-size: 0.9rem;
+    }
 }
-
 
 /* =========================================
    TRÈS PETITS ÉCRANS
@@ -471,20 +502,18 @@
 @media screen and (max-width: 420px) {
 
     .gallerieProjets {
-        padding: 25px 5px;
+        padding: 20px 5px;
     }
 
     .flecheDeDefilement {
-        width: 32px;
-        height: 32px;
-
-        flex-basis: 32px;
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
     }
 
-    .conteneurGallerie {
-        gap: 4px;
+    .contenuProjet {
+        padding: 15px;
     }
-
 }
 
 
@@ -494,8 +523,4 @@
 
 body {
     background-color: #eef2f7;
-}
-
-.projet {
-    flex: 0 0 calc((100% - 48px) / 3);
 }

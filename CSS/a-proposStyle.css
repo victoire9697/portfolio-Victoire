@@ -6,6 +6,24 @@ body {
     background-color: #eef2f7;
 }
 
+.logoSymbole {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 14px;
+
+    background-color: #bd1e2d;
+    color: #ffffff;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    box-shadow: 0 6px 15px rgba(189, 30, 45, 0.25);
+}
 
 /* =========================================
    INTRODUCTION
@@ -457,7 +475,7 @@ body {
     }
 
     .grilleLangues {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -468,6 +486,10 @@ body {
 ========================================= */
 
 @media screen and (max-width: 650px) {
+
+    .grilleLangues {
+        grid-template-columns: 1fr;
+    }
 
     .aProposMoi,
     .formation,
@@ -558,4 +580,20 @@ body {
 
 .boutonTelecharger:hover {
     background-color: #1f2937;
+}
+
+@media screen and (max-width: 650px) {
+
+    .sectionCV {
+        padding: 25px 18px;
+    }
+
+    .sectionCV h2 {
+        font-size: 1.6rem;
+    }
+
+    .boutonCV {
+        width: 100%;
+        margin: 6px 0;
+    }
 }
